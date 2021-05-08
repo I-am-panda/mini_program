@@ -128,13 +128,13 @@ Page({
         this.setData({
           list:list
         })
-          wx.showLoading({
-            title: '加载中',
-          })
-          util.request(url,list[i],'POST',(res)=>{
-            wx.hideLoading();
-            // this.onLoad()
-          })
+        wx.showLoading({
+          title: '加载中',
+        })
+        util.request(url,list[i],'POST',(res)=>{
+          wx.hideLoading();
+          // this.onLoad()
+        })
       }
     },
 })

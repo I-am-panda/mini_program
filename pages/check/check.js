@@ -94,23 +94,15 @@ Page({
   },
 //多列选择器：
 bindMultiPickerChange: function (e) {
-  
   var reportList1 = this.data.reportList
   reportList1[e.currentTarget.dataset.id].multiArray  = this.data.multiArray
   reportList1[e.currentTarget.dataset.id].multiIndex  = e.detail.value
-  console.log(reportList1[e.currentTarget.dataset.id].multiIndex)
-  console.log('picker发送选择改变，携带值为', e.detail.value)
-  console.log(reportList1)
   this.setData({
     reportList : reportList1
   })
-  console.log(this.data.reportList)
-  // console.log( multiArray[0][multiIndex[0]],multiArray[1][multiIndex[1]])
 },
 bindMultiPickerColumnChange: function (e) {
-  console.log(e)
   if (e.detail.column==0){//第1列
-    
     if (e.detail.value == 0) {
       this.setData({
         multiArray: [['桌椅', '水电','电器','其它'], ['张三', '李四']]
