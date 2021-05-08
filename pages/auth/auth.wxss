@@ -1,0 +1,18 @@
+/* pages/auth/auth.wxss */
+page {
+  background-color: rgb(243, 255, 241);
+}
+
+.container {
+  padding: 100rpx 0;
+  height: 100%;
+}
+
+.title {
+  letter-spacing: 10rpx;
+}
+
+.mini{
+  position:fixed; 
+  bottom:0;
+}

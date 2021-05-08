@@ -1,0 +1,59 @@
+<!--pages/del/del.wxml-->
+<view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 删除列表
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-red light shadow"   bindtap="accomplish" >完成</button>
+    </view>
+</view>
+
+<view class="cu-list grid col-5 no-border">
+  <view class="cu-item">
+    <view class="cuIcon-sort text-blue icon" style="font-size:30rpx;">
+      <text>编号</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-group text-yellow icon" style="font-size:30rpx;" bindtap="jumpReport">
+      <text>学号/工号</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-write text-red icon" style="font-size:30rpx;" bindtap="jumpException">
+      <text>姓名</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-people text-olive icon" style="font-size:30rpx;" bindtap="callAdmin">
+      <text>角色</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-home text-olive icon" style="font-size:30rpx;" bindtap="callAdmin">
+      <text>操作</text>
+    </view>
+  </view>
+</view>
+
+<scroll-view scroll-y="true" class="margin-bottom-xl">
+  <view class="cu-list grid col-5 no-border" wx:for="{{list}}" wx:key="id" wx:for-item="item" wx:for-index = "index">
+    <view class="cu-item">
+      <text>{{item.id}}</text>
+    </view>
+    <view class="cu-item">
+      <text>{{item.number}}</text>
+    </view>
+    <view class="cu-item">
+        <text>{{item.password}}</text>
+    </view>
+    <view class="cu-item">
+        <text>{{item.role}}</text>
+    </view>
+    <view class="cu-item" >
+      <checkbox-group class="block" bindchange="checkboxChange" data-index= '{{index}}'>
+          <checkbox class='round red' value="{{item.number}}" ></checkbox>
+      </checkbox-group>
+    </view>
+  </view>
+</scroll-view>

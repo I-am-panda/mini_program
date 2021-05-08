@@ -1,0 +1,131 @@
+<!--pages/check/check.wxml-->
+<scroll-view scroll-y="{{modalName==null}}" class="page show">
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 审核列表
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="menuModal">设置</button>
+    </view>
+  </view>
+
+  <view class="cu-modal {{modalName=='menuModal'?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog" catchtap = "test">
+      <scroll-view scroll-y style="height:200rpx">
+        <view class="cu-list menu text-left solid-top">
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">未分配</text>
+            </view>
+            <view class="action">
+              <switch bindchange="notSolve" checked="{{notSolve}}"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">已分配</text>
+            </view>
+            <view class="action">
+              <switch bindchange="isSolve" checked="{{isSolve}}"></switch>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view wx:for="{{reportList}}" wx:for-index="idx" wx:for-item="item" wx:key = "index">
+    <view class="cu-list menu card-menu margin-top margin-bottom-xl"
+      wx:if="{{(item.status2 == '0'&&notSolve == true)||(item.status2 == '1'&&isSolve == true)}}">
+      <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-card text-orange"></text>
+          <text class="text-grey">报修时间</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-df">{{item.time}}</text>
+        </view>
+      </view>
+      <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-locationfill text-cyan"></text>
+          <text class="text-grey">位置</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-df">{{item.location}}</text>
+        </view>
+      </view>
+      <view class="cu-item">
+        <view class="content padding-tb-sm">
+          <view class="text-grey">
+            <text class="cuIcon-clothesfill text-blue margin-right-xs"></text>故障描述</view>
+          <view class="text-gray text-df">
+            <text class="cuIcon-infofill margin-right-xs"></text>{{item.description}}</view>
+        </view>
+      </view>
+      <view class="cu-item">
+          <view class="content">
+            <text class="cuIcon-tagfill text-red"></text>
+            <text class="text-grey">宿舍号</text>
+          </view>
+          <view class="action">
+            <view class="cu-tag round bg-orange light">{{item.dormitory}}</view>
+          </view>
+      </view>
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="cuIcon-picfill text-pink"></text>
+          <text class="text-grey">查看图片</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-sm"></text>
+        </view>
+      </view>
+      <view class="cu-item">
+        <view class="content padding-tb-sm">
+          <view class="text-grey">
+            <text class="cuIcon-edit text-blue margin-left-xs"></text>
+            <text class="text-grey margin-left-xs">备注</text>
+          </view>
+          <view class="text-gray text-df ">
+            <text class="cuIcon-info margin-left-xs"></text>
+            <text class="text-grey margin-left-xs">{{item.remark}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="cu-item">
+          <view class="content">
+            <text class="cuIcon-rankfill text-red"></text>
+            <text class="text-grey">类别</text>
+          </view>
+          <view class="action">
+            <view class="cu-tag round bg-olive light" data-item="{{item}}" value="{{item.multiIndex}}">
+              {{item.multiArray[0][item.multiIndex[0]]}} 
+            </view>
+          </view>
+      </view>
+      <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-round text-green"></text>
+          <text class="text-grey">分配人员</text>
+        </view>
+        <view class="action" >
+          <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" 
+                  data-item="{{item}}" data-id="{{item.id}}" value="{{item.multiIndex}}" range="{{multiArray}}">
+            <view class="picker text-gray text-df">
+              {{multiArray[0][item.multiIndex[0]]}}   {{item.multiArray[1][item.multiIndex[1]]}}
+            </view>
+          </picker>
+        </view>
+    </view>
+      <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-newshotfill text-yellow"></text>
+          <text class="text-grey">分配状态</text>
+        </view>
+        <view class="action" >
+          <switch data-idx="{{idx}}" data-id="{{item.id}}" data-item="{{item}}" class="switch-solve sm" bindchange="switchStatu" checked="{{item.status2=='1'}}"></switch>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

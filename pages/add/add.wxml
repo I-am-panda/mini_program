@@ -1,0 +1,48 @@
+<!--pages/add/add.wxml-->
+<form bindsubmit='formclick'>	
+  <view class="cu-form-group margin-top">
+		<view class="title">学号/工号</view>
+		<input placeholder="请输入学号/工号" type="text" bindinput="accountInput" maxlength="8"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">密码</view>
+		<input placeholder="请输入密码" type="password" bindinput="passwordInput" maxlength="8"></input>
+	</view>
+	<view class="cu-form-group">
+    <view class="title">姓名</view>
+    <input placeholder="请输入姓名" type="text" bindinput="nameInput" maxlength="3"></input>
+	</view>
+	<view class="cu-form-group">
+    <view class="title">性别</view>
+    <input placeholder="请输入性别" type="text" bindinput="sexInput" maxlength="1"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">学院  </view>
+		<input placeholder="请输入所属学院" type="text" bindinput="collegeInput" maxlength="12"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">角色</view>
+		<input placeholder="请输入(管理员/学生/维修人员)" bindinput="identityInput" maxlength="4"></input>
+		<button class='cu-btn bg-green shadow'>角色</button>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">手机号码</view>
+		<input placeholder="请输入手机号码" name='phone' bindinput="phoneInput" maxlength="12"></input>
+		<view class="cu-capsule radius">
+			<view class='cu-tag bg-blue '>+86</view>
+			<view class="cu-tag line-blue">中国大陆</view>
+		</view>
+  </view>
+  <view class="flex flex-direction padding">
+    <button class="cu-btn bg-blue round lg light" form-type='submit'>提交</button>
+  </view>
+</form>
+<view class=" flex flex-direction padding">
+  <button class="cu-btn bg-grey round lg light" bindtap="Back">返回</button>
+</view>
+<view class="text-center margin-top-xl padding">
+  <text class="text-gray text-df">华南理工大学广州学院</text>
+</view>
+
+
+

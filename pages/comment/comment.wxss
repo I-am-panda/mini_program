@@ -1,0 +1,67 @@
+/* pages/Personal-Center/comment/comment.wxss */
+
+.box {
+  display: flex;
+  flex-direction: column;
+  background: #F2F2F2;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.font1 {
+  font-size: 28rpx;
+  margin-bottom: 25rpx;
+  margin-top: 25rpx;
+  margin-left: 20rpx;
+  position: relative;
+  color: #9E9E9E
+}
+
+.textarea1 {
+  border-radius: 1rpx;
+  padding: 5rpx;
+  font-size: 32rpx;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 200rpx;
+  background-color: #FFFFFF
+}
+
+.numposition {
+  position: absolute;
+  color: gray;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+
+.image2 {
+  height: 110rpx;
+  width: 110rpx;
+  background-color: #39B54A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.text1 {
+  color: #868686;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+

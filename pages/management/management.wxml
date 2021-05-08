@@ -1,0 +1,58 @@
+<!--pages/list/list.wxml-->
+<view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 用户列表
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow"   bindtap="addArea" >添加</button>
+      <button class="cu-btn bg-red shadow margin-left-lg"  bindtap="deleteArea" >删除</button>
+    </view>
+</view>
+
+<view class="cu-list grid col-5 no-border">
+  <view class="cu-item">
+    <view class="cuIcon-sort text-blue icon" style="font-size:30rpx;">
+      <text>编号</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-group text-yellow icon" style="font-size:30rpx;" bindtap="jumpReport">
+      <text>学号/工号</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-write text-red icon" style="font-size:30rpx;" bindtap="jumpException">
+      <text>姓名</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-people text-olive icon" style="font-size:30rpx;" bindtap="callAdmin">
+      <text>角色</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="cuIcon-home text-olive icon" style="font-size:30rpx;" bindtap="callAdmin">
+      <text>操作</text>
+    </view>
+  </view>
+</view>
+
+<scroll-view scroll-y="true">
+  <view class="cu-list grid col-5 no-border" wx:for="{{list}}" wx:key="id" wx:for-item="item" wx:for-index = "index">
+    <view class="cu-item">
+      <text>{{item.id}}</text>
+    </view>
+    <view class="cu-item" >
+      <input class="title"  disabled='true' value='{{item.number}}' data-index= '{{index}}' maxlength='9' bindinput="numberInput"></input>
+    </view>
+    <view class="cu-item" >
+      <input class="title"  disabled='{{item.isDisabled}}' value='{{item.password}}' data-index= '{{index}}' maxlength='9' bindinput="passwordInput"></input>
+    </view>
+    <view class="cu-item">
+      <input class="title"  disabled='{{item.isDisabled}}' value='{{item.role}}' maxlength='4' data-index= '{{index}}' bindinput="roleInput"></input>
+    </view>
+    <view class="cu-item" >
+      <button class="cu-btn bg-blue shadow " data-index= '{{index}}' bindtap="editArea" >{{item.text}}</button>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,23 @@
+/* pages/information/imformation.wxss */
+page{
+  height: 100%;
+  background-color: white;
+}
+
+.cuIcon-male{
+  font-size: 40rpx !important;
+}
+
+.cuIcon-female{
+  font-size: 40rpx !important;
+  color: #e03997 !important;
+}
+
+.cu-form-group  {
+  min-height: calc(4em + 20px);
+}
+
+.title {
+  font-size: 34rpx !important;
+  padding-left: 6%;
+}

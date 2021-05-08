@@ -1,0 +1,28 @@
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 意见反馈
+    </view>
+  </view>
+  <view wx:for="{{reportList}}" wx:for-index="idx" wx:for-item="item" wx:key = "index">
+    <view class="cu-list menu card-menu margin-top margin-bottom-xl">
+      <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-card text-orange"></text>
+          <text class="text-grey">反馈时间</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-df">{{item.time}}</text>
+        </view>
+      </view>
+      <view class="cu-item">
+        <view class="content padding-tb-sm">
+          <view class="text-grey">
+            <text class="cuIcon-lightfill text-purple margin-right-xs"></text>内容
+          </view>
+          <view class="text-gray text-df margin-left-xl">
+            <textarea style="max-height:150px" value="{{item.remark}}" disabled="true"></textarea>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>

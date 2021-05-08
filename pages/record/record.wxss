@@ -1,0 +1,14 @@
+/* pages/record/record.wxss */
+
+.record {
+  background-color: white;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 20rpx;
+  padding-bottom: 0rpx;
+}
+
+.row {
+  padding: 0rpx 30rpx 20rpx 30rpx;
+  display: flex;
+}

@@ -1,0 +1,10 @@
+/* pages/management/management.wxss */
+page{
+  height: 100%;
+  background-color: white;
+}
+
+text{
+  font-size: 30rpx !important;
+  color: grey !important;
+}

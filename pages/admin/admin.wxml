@@ -1,0 +1,42 @@
+<!--pages/admin/admin.wxml-->
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 管理员功能
+  </view>
+</view>
+<!-- 更多功能列表的分菜单 -->
+<view class="cu-list menu sm-border" bindtap="jumpManagement">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-friend text-orange"></text>
+      <text class="text-grey">用户信息</text>
+    </view>
+  </view>
+  <view class="cu-item arrow" bindtap="jumpReport">
+    <view class="content">
+      <text class="cuIcon-searchlist text-yellow"></text>
+      <text class="text-grey">意见反馈查看</text>
+    </view>
+  </view>
+  <view class="cu-item arrow" bindtap="jumpCheck">
+    <view class="content">
+      <text class="cuIcon-form text-blue"></text>
+      <text class="text-grey">审核</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 操作
+  </view>
+</view>
+<!-- 操作的分菜单 -->
+<view class="cu-list menu sm-border">
+  <view class="cu-item arrow" bindtap="Back">
+    <view class="content">
+      <text class="cuIcon-home text-red"></text>
+      <text class="text-grey">主页</text>
+    </view>
+  </view>
+</view>

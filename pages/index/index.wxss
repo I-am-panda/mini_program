@@ -1,0 +1,22 @@
+/**index.wxss**/
+page{
+  height: 100%;
+  background-color: white;
+}
+
+.user-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  align-items: center;
+}
+
+.cu-item{
+  padding-top: 50rpx !important;
+  padding-bottom: 100rpx !important;
+}
+
+.cu-item text{
+  font-weight: 800;
+}

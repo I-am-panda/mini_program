@@ -1,0 +1,33 @@
+<!--pages/record/record.wxml-->
+<view class="margin-bottom-xl" wx:for="{{records}}" wx:for-item="item" wx:key="index">
+  <view class="record margin-top">
+    <view class="flex solid-bottom padding justify-between">
+      <view class="text-olive">报修情况</view>
+      <view><text class=" {{item.condition =='已处理'?'cuIcon-check text-blue':'cuIcon-brand text-red'}} text-bold">{{item.condition}}</text></view>
+    </view>
+    <view class="row">
+      <view class="cuIcon-time lg text-yellow icon"> </view>
+      <view class="margin-left">{{item.time}}</view>
+    </view>
+    <view class="row">
+      <view class="cuIcon-mobile lg text-pink icon"> </view>
+      <view class="margin-left">{{item.phone}}</view>
+    </view>
+    <view class="row">
+      <view class="cuIcon-round lg text-cyan icon"> </view>
+      <view class="margin-left">{{item.name}}</view>
+    </view>
+    <view class="row">
+      <view class="cuIcon-post lg text-red icon"> </view>
+      <view class="margin-left">{{item.description}}</view>
+    </view>
+    <view class="row">
+      <view class="cuIcon-locationfill lg text-green icon"> </view>
+      <view class="margin-left">{{item.dormitory}}</view>
+    </view>
+    <view class="row">
+      <view class="cuIcon-discover lg text-orange icon"> </view>
+      <view class="margin-left">{{item.location}}</view>
+    </view>
+  </view>
+</view>

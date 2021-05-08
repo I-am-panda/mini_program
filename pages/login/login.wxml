@@ -1,0 +1,27 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <image class="userinfo-avatar" src="/static/img/logo.png" mode="cover"></image>
+  <form>
+    <view class="cu-form-group">
+      <view class="cuIcon-profile text-olive icon"></view>
+		  <input placeholder=" 请输入账号" type="text" bindinput="userNameInput"></input>
+    </view>
+
+    <view class="cu-form-group margin-top">
+      <view class="cuIcon-lock text-olive icon"></view>
+		  <input placeholder=" 请输入密码" type="password" bindinput="passwordInput"></input>
+    </view>
+  </form>
+</view>
+
+  <view class="flex flex-direction padding">
+    <button class="cu-btn bg-blue round lg light" bindtap="adminLogin">登录</button>
+  </view>
+
+  <view class=" flex flex-direction padding">
+    <button class="cu-btn bg-grey round lg light" bindtap="Back">返回</button>
+  </view>
+
+  <view class="text-center margin-top-xl">
+    <text class="text-gray text-df">华南理工大学广州学院</text>
+  </view>

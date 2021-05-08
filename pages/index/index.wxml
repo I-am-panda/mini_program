@@ -1,0 +1,55 @@
+<!--index.wxml-->
+
+<view >
+  <view class="bg-green " style="border-bottom-right-radius:2em;border-bottom-left-radius:2em;">
+    <!-- 头像部分 -->
+    <view class="flex solid-bottom padding justify-center">
+      <view class='user-avatar '>
+        <open-data type='userAvatarUrl'></open-data>
+      </view>
+    <!-- userInfo -->
+      <view class="text-xxl  margin-lg radius text-center">
+        <open-data type='userNickName'></open-data>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-list grid col-2 no-border">
+    <view class="cu-item">
+      <view class="cuIcon-people text-blue icon" style="font-size:60rpx;" bindtap="jumpPerson">
+        <text>个人信息</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="cuIcon-repair text-yellow icon" style="font-size:60rpx;" bindtap="jumpReport">
+        <text>故障报修</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="cuIcon-post text-red icon" style="font-size:60rpx;" bindtap="jumpException">
+        <text>我的报修</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="cuIcon-service text-olive icon" style="font-size:60rpx;" bindtap="callAdmin">
+        <text>意见反馈</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="cuIcon-discover text-black icon" style="font-size:60rpx;" bindtap="goback">
+        <text>校园地图</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="cuIcon-pullright text-brown icon" style="font-size:60rpx;" bindtap="goback">
+        <text>更多功能</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="text-center ">
+    <text class="text-gray text-df">华南理工大学广州学院</text>
+</view>
